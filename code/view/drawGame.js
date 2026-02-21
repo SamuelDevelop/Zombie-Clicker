@@ -13,16 +13,12 @@ export async function apresentar(){
     let string = 
     `
         <section>
+            <article class="part-game playerData"></article>
             <article class="part-game player">
                 <img src="../${playerImage}">
-                <p><i class="fa-solid fa-user"></i> <b>Você</b></p>
             </article>
-
             <article class="part-game atualEnemy"></article>
-        </section>
-
-        <section>
-            <article class="part-life"></article>
+            <article class="part-game atualEnemyData"></article>
         </section>
 
         <div class="number-counter-conteiner"></div>
@@ -38,9 +34,7 @@ export function loadInimigo(inimigo){
 
     atualEnemyEl.innerHTML =
     `
-        <h3>${inimigo.name}</h3>
         <img class="enemyEl" src="../${inimigo.sprite}">
-        <p class="enemyLife"><i class="fa-solid fa-heart"></i> <b> ${inimigo.vida}</b></p>
     `;
 }
 
@@ -55,10 +49,26 @@ export function clearInimigo(){
     `;
 }
 
-export function atualizarVidaInimigo(vida){
-    const enemyLifeEl = document.querySelector(".enemyLife");
+export function atualizarDadosInimigo(inimigoControll){
+    const enemyDataEl = document.querySelector(".atualEnemyData");
+    const barraEl = criarBarra(inimigoControll.getVidaAtual(), inimigoControll.getVidaInicial());
+    enemyDataEl.innerHTML = 
+    `
+        <h3>${inimigoControll.getNomeAtual()}</h3>
+        ${barraEl}        
+    `;
+}
 
-    enemyLifeEl.innerHTML = `<i class="fa-solid fa-heart"></i> <b> ${vida}</b>`;
+export function atualizarDadosJogador(player){
+    const playerDataEl = document.querySelector(".playerData");
+
+    playerDataEl.innerHTML = 
+    `
+        <p><i class="fa-solid fa-user"></i> <b>Você:</b></p>
+        <p><i class="fa-solid fa-heart"></i> <b> ${player.getVidaAtual()}</b></p>
+        <p><i class="fa-solid fa-arrow-pointer"></i>:${player.getClicks()}</p>
+        <p><i class="fa-solid fa-skull"></i>:${player.getInimigosDerrotados()}</p>
+    `
 }
 
 export function mudarModoBoss(boss){
@@ -97,7 +107,7 @@ export function addChatMensage(autor, msg){
     const conteiner = document.querySelector(".chat-conteiner");
 
     let chatEl = document.createElement("p");
-    chatEl.innerHTML = `<b>${autor}:</b> ${msg}`;
+    chatEl.innerHTML = `<i class="fa-regular fa-message"></i> <span class="txt-yellow"><b>${autor}:</b></span> ${msg}`;
     chatEl.classList.add("chat");
 
     conteiner.appendChild(chatEl);
@@ -113,4 +123,19 @@ export function addChatMensage(autor, msg){
         chatEl.style.display = "none";
         chatEl.remove();
     }, 5100);
+}
+
+export function criarBarra(valorAtual, valorMax){
+
+    let porcentagem = Math.floor((valorAtual / valorMax) * 100);
+
+    if(porcentagem < 0) porcentagem = 0;
+    if(porcentagem > 100) porcentagem = 100;
+
+    return `
+        <div class="barra-container">
+            <div class="barra-preenchimento" style="width: ${porcentagem}%;">
+            </div>
+        </div>
+    `;
 }

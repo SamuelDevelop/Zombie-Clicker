@@ -6,6 +6,7 @@
 }
 
 .conteudo-principal > section{
+    width: 60%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -27,8 +28,8 @@ article p{
     color: white;
 }
 
-.player p, .atualEnemy p{
-    width: 50%;
+.player p, .playerData p, .atualEnemyData p{
+    width: 40%;
     text-align: center;
     font-family: "Google Sans Code", monospace;
     background-color: rgba(0, 0, 0, 0.562);
@@ -36,12 +37,26 @@ article p{
     border-radius: 0.5rem;
 }
 
-.atualEnemy > h3{
+.atualEnemyData h3{
     font-family: "Jolly Lodger", system-ui;
     color: white;
-    -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.185);
+    -webkit-text-stroke: 0.5px rgb(24, 5, 36);
         
     font-size: 28pt;
+}
+
+.part-game {
+    flex: 1;
+    gap: 0.1rem;
+}
+
+.dano {
+    animation: hitFlash 0.1s;
+}
+
+@keyframes hitFlash {
+    0% { filter: brightness(5) contrast(4); }
+    100% { filter: brightness(1) contrast(1); }
 }
 
 .number-counter{
@@ -91,7 +106,20 @@ article p{
     
     border-radius: 0.5rem;
 
-    font-size: 14pt;
-    font-weight: bolder;
+    font-size: 12pt;
 }
 
+.barra-container{
+    width: 100%;
+    height: 20px;
+    background-color: rgba(50, 13, 71, 0.836);
+    border: 2px solid rgb(24, 5, 36);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.barra-preenchimento{
+    height: 100%;
+    background-image: var(--gradienteRoxo);
+    transition: width 0.3s ease;
+}

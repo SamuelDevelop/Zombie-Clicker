@@ -5,35 +5,40 @@
             "name": "Davy Jones",
             "sprite": "images/bosses/esqueletao.gif",
             "boss": true,
-            "vida": 100
+            "vida": 30,
+            "frase": "e no finalzinho vem um negócinho..."
         },
         {
             "id": "flor",
             "name": "Flor de Cabeça",
             "sprite": "images/bosses/florHead.gif",
             "boss": true,
-            "vida": 100
+            "vida": 50,
+            "frase": "Pra me enfrentar, tem que ser elite, ou então só vai ter rinite!"
         },
         {
             "id": "ganon",
             "name": "Cria de Hyrule",
             "sprite": "images/bosses/ganon.gif",
             "boss": true,
-            "vida": 100
+            "vida": 50,
+            "frase": "você não ginga como eu gingo!"
         },
         {
             "id": "ocram",
             "name": "Baratão",
             "sprite": "images/bosses/ocram.webp",
             "boss": true,
-            "vida": 100
+            "vida": 70,
+            "frase": "o texto está em baratês"
         },
         {
             "id": "gecko",
             "name": "Vilão Genérico",
             "sprite": "images/bosses/geco.gif",
             "boss": true,
-            "vida": 100
+            "vida": 70,
+            "frase": "vou te contar meus planos, espere um instantinho..."
         }
     ]
 }

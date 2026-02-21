@@ -17,3 +17,9 @@ export async function getBossById(id) {
     
     return allBosses.characters.find(b => b.id === id);
 }
+
+export async function getGunById(id) {
+    const allGuns = await functions.getGuns();
+    
+    return allGuns.guns.find(g => g.id === id);
+}

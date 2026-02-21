@@ -2,14 +2,14 @@
     "guns": [
         {
             "id": 0,
-            "sprite": "images/Espada_de_piedra.webp",
+            "sprite": "images/guns/Espada_de_piedra.webp",
             "price": 0,
             "damage": 1,
             "clicksReward": 1
         },
         {
             "id": 1,
-            "sprite": "images/Espada_de_oro.webp",
+            "sprite": "images/guns/Espada_de_oro.webp",
             "price": 100,
             "damage": 5,
             "clicksReward": 2
@@ -17,7 +17,7 @@
 
         {
             "id": 2,
-            "sprite": "images/Diamond_Sword.webp",
+            "sprite": "images/guns/Diamond_Sword.webp",
             "price": 300,
             "damage": 10,
             "clicksReward": 5
@@ -25,7 +25,7 @@
 
         {
             "id": 3,
-            "sprite": "images/espadaroxinha.gif",
+            "sprite": "images/guns/espadaroxinha.gif",
             "price": 500,
             "damage": 50,
             "clicksReward": 6
@@ -33,7 +33,7 @@
 
         {
             "id": 4,
-            "sprite": "images/Netherite_Sword.webp",
+            "sprite": "images/guns/Netherite_Sword.webp",
             "price": 800,
             "damage": 100,
             "clicksReward": 8
@@ -41,7 +41,7 @@
 
         {
             "id": 5,
-            "sprite": "images/espada suprema.gif",
+            "sprite": "images/guns/espada suprema.gif",
             "price": 1000,
             "damage": 250,
             "clicksReward": 10
@@ -49,7 +49,7 @@
 
         {
             "id": 6,
-            "sprite": "images/deusessword.gif",
+            "sprite": "images/guns/deusessword.gif",
             "price": 2500,
             "damage": 500,
             "clicksReward": 12
@@ -57,7 +57,7 @@
 
         {
             "id": 7,
-            "sprite": "images/machadin.gif",
+            "sprite": "images/guns/machadin.gif",
             "price": 5000,
             "damage": 1000,
             "clicksReward": 15
@@ -65,7 +65,7 @@
 
         {
             "id": 8,
-            "sprite": "images/luminite-sword.gif",
+            "sprite": "images/guns/luminite-sword.gif",
             "price": 8555,
             "damage": 2500,
             "clicksReward": 20

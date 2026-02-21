@@ -15,43 +15,43 @@
         {
             "id": "goku",
             "name": "Goku Base",
-            "description": "...",
+            "description": "Goku descobriu que havia zombies muito fortes por esta região, e decidiu vir enfrentá-los.",
             "image": "images/characters/goku.gif"
         },
         {
             "id": "homer",
             "name": "Homer Simpson",
-            "description": "...",
+            "description": "Prometeram rosquinhas grátis pra quem derrotasse 100 mil Zombies, Homer já tá na fila!",
             "image": "images/characters/homer.gif"
         },
         {
             "id": "labubu",
             "name": "Labubu",
-            "description": "...",
+            "description": "Nada melhor do que bichinhos de pelúcia para salvar o mundo de uma invasão zombie!",
             "image": "images/characters/labubu.gif"
         },
         {
             "id": "monkey",
             "name": "Monkey D. Luffy",
-            "description": "...",
+            "description": "Antes de achar o One Piece, Luffy se aventurou na ilhas dos zombies malucos e decidiu enfrentá-los.",
             "image": "images/characters/luffy.gif"
         },
         {
             "id": "megaman",
             "name": "MegaMan",
-            "description": "...",
+            "description": "Nada como um robô azul enfrentando zombies certo? (Eu não sabo muito de megamentes)",
             "image": "images/characters/megamen.gif"
         },
         {
             "id": "sonic",
             "name": "Sonic",
-            "description": "...",
+            "description": "Correu e vapo! Mais um zombie foi derrotado! Dizem que isso foi obra do Dr. Eggman...",
             "image": "images/characters/sonic.gif"
         },
         {
             "id": "grogu",
             "name": "Grogu",
-            "description": "...",
+            "description": "Que força esteja... pera o que o Grogu anda fazendo por estas terras? Espero que consiga sobreviver ao zombies.",
             "image": "images/characters/grogu.gif"
         }
     ]

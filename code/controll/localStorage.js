@@ -6,12 +6,12 @@ export function criarSave(nome, personagem){
         clicksTotais: 0,
         aumentoClicks: 1,
         danoAtual: 1,
-        armaAtual: "base",
+        armaAtual: 0,
         vidaAtual: 100,
         zombiesMortos: 0,
         
         registroInimigos: [],
-        armasDesbloqueadas: [],
+        armasDesbloqueadas: [0],
     }
     
     localStorage.setItem("ClickerData", JSON.stringify(PLAYER_DATA));

@@ -37,26 +37,10 @@ export async function createGameHeader(){
             <h1>Zombie Clicker</h1>
         </div>
         <div class="header-parte">
-            <button id="alterna-menu">
-                <i class="fa-solid fa-house"></i>
+            <button onclick="window.location = 'menu.html'">
+                <i class="fa-solid fa-bag-shopping"></i>
             </button>   
         </div>
     `;
 }
-
-const queroManterIssoGuardado = 
-`
-    <button id="alterna-menu">
-        <i class="fa-solid fa-bag-shopping"></i>
-    </button>
-    <button>
-        <i class="fa-solid fa-bullseye"></i>
-    </button>
-    <button>
-        <i class="fa-solid fa-star"></i>
-    </button>
-    <button>
-        <i class="fa-solid fa-trophy"></i>
-    </button>
-`;
 

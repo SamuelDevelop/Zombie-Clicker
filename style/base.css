@@ -18,10 +18,16 @@ img {
 :root {
     --gradienteRoxo: linear-gradient(to right bottom, rgba(133, 67, 255, 0.596), rgba(96, 38, 255, 0.925), rgb(99, 32, 255));
     --gradientePretoT: linear-gradient(to right bottom, rgba(0, 0, 0, 0.849),rgba(0, 0, 0, 0.411), rgba(0, 0, 0, 0));
+    --gradienteAzul: linear-gradient(to right bottom, rgba(67, 80, 255, 0.596), rgba(38, 42, 255, 0.925), rgb(18, 13, 83));
+    --gradienteGold: linear-gradient(to right bottom, rgba(255, 153, 0, 0.651), rgb(206, 134, 0));
 }
 
 body{
     background-image: url("../images/iu/ground.svg");
+}
+
+.txt-yellow{
+    color: rgb(255, 255, 41) !important;
 }
 
 header{
@@ -74,8 +80,8 @@ header{
 }
 
 .header-parte > button:hover{
-    color: rgba(0, 0, 0, 0.466);
-    border-bottom: 2px rgba(0, 0, 0, 0.466) solid;
+    color: rgb(243, 153, 255);
+    border-bottom: 2px rgb(243, 153, 255) solid;
 }
 
 .options{

@@ -4,7 +4,7 @@
             "id": "zombie1",
             "name": "Rival de Plantas",
             "sprite": "images/enemys/zombie1.gif",
-            "vida": 10,
+            "vida": 5,
             "frase": "na próxima eu prometo acabar com a alegria dessas plantinhas"
         },
         {
@@ -12,27 +12,27 @@
             "name": "Dor no Olho",
             "sprite": "images/enemys/zombie2.gif",
             "vida": 10,
-            "frase": "acho que se eu passar um soro fisiológico melhora"
+            "frase": "se eu passar um soro fisiológico melhora..."
         },
         {
             "id": "zombie3",
             "name": "MichaelBie",
             "sprite": "images/enemys/zombie3.gif",
-            "vida": 10,
-            "frase": "Anne você está ok? Yeah! Yeah!"
+            "vida": 12,
+            "frase": "Anne você está ok?"
         },
         {
             "id": "zombie4",
             "name": "Zombie Cone",
             "sprite": "images/enemys/zombie4.gif",
-            "vida": 10,
-            "frase": "Se as pessoas seguissem as regras de transito o mundo seria melhor"
+            "vida": 12,
+            "frase": "se seguissem as regras de transito o mundo seria melhor"
         },
         {
             "id": "zombie5",
             "name": "Block Zombie",
             "sprite": "images/enemys/zombieMine.gif",
-            "vida": 10,
+            "vida": 14,
             "frase": "Argh! Argh! Argh!"
         }
     ]

@@ -6,29 +6,38 @@ import * as draw from "../view/drawGame.js";
 export class Enemies{
     constructor(Player){
         this.inimigoAtual = null;
+        this.nome = null;
         this.temInimigoEmTela = false;
         this.player = Player;
     }
 
-    async iniciarInimigos(){
-        this.inimigoAtual = await Enemies.getProxEnemy();
+    async novoInimigo(){
+        this.inimigoAtual = await this.getProxEnemy();
+        this.nome = this.inimigoAtual.name;
+        let fatorVida = utils.fatorDeVidaInimiga(this.player.getInimigosDerrotados());
+        this.vida = Math.floor(this.inimigoAtual.vida * fatorVida);
+        this.vidaInicial = this.vida;
+
         draw.loadInimigo(this.inimigoAtual);
+        draw.atualizarDadosInimigo(this);
+
         this.temInimigoEmTela = true;
         this.setEventListener();
-
-        this.vida = this.inimigoAtual.vida;
+        
         draw.mudarModoBoss(this.inimigoAtual.boss);
+
     }
 
-    //faz literalmente a msm coisa LOL XD
-    async trocarInimigo(){
-        this.inimigoAtual = await Enemies.getProxEnemy();
-        draw.loadInimigo(this.inimigoAtual);
-        this.temInimigoEmTela = true;
-        this.setEventListener();
+    getVidaAtual(){
+        return this.vida
+    }
 
-        this.vida = this.inimigoAtual.vida;
-        draw.mudarModoBoss(this.inimigoAtual.boss);
+    getVidaInicial(){
+        return this.vidaInicial;
+    }
+
+    getNomeAtual(){
+        return this.nome;
     }
 
     apagarInimigos(){
@@ -42,24 +51,30 @@ export class Enemies{
         inimigoEl.addEventListener("click", (event)=>{
             if(this.temInimigoEmTela){
                 this.clique(event);
+
+                inimigoEl.classList.add("dano");
+
+                setTimeout(() => {
+                    inimigoEl.classList.remove("dano");
+                }, 100);
             }
         });
     }
 
     async clique(event){
-        this.vida -= 1;
-        draw.mostrarNumeroClick(1, "-", event);
-        draw.atualizarVidaInimigo(this.vida);
+        this.vida -= this.player.getDanoAtual();
+        draw.mostrarNumeroClick(this.player.getDanoAtual(), "-", event);
+        draw.atualizarDadosInimigo(this);
         this.player.somaClicks();
 
         if(this.vida <= 0){
             draw.addChatMensage(this.inimigoAtual.name, this.inimigoAtual.frase)
-            await this.trocarInimigo();
+            await this.novoInimigo();
             this.player.somaInimigosDerrotados();
         }
     }
 
-    static async getProxEnemy(){
+    async getProxEnemy(){
         const PLAYER_DATA = localStorage.getDados();
     
         if(PLAYER_DATA.zombiesMortos % 10 == 0 && PLAYER_DATA.zombiesMortos != 0){

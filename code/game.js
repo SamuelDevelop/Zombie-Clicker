@@ -17,6 +17,6 @@ async function loadPage(){
     const PLAYER = new Player();
 
     const ENEMIES = new Enemies(PLAYER);
-    await ENEMIES.iniciarInimigos(); 
+    await ENEMIES.novoInimigo(); 
     
 }

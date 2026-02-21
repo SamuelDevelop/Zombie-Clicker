@@ -17,3 +17,12 @@ export function randomBool(){
         return false;
     }
 }
+
+export function fatorDeVidaInimiga(valor){
+    if(valor <= 10){
+        return 1;
+    }
+    else{
+        return valor / 10;
+    }
+}

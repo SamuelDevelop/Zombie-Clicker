@@ -19,6 +19,8 @@
     background-image: var(--popGolden);
     opacity: 1;
     transition: all ease-in-out 200ms;
+
+    border-radius: 1rem;
 }
 
 .popUp h2, .popUp p{
